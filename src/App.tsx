@@ -1,14 +1,18 @@
 "use client";
 
 import { useState, useRef } from "react";
+import VisualiserBars from "./components/visualiser-bars/VisualiserBars";
+import VisualiserWeird from "./components/visualiser-weird/VisualiserWeird";
 import AudioControls from "./components/audio-controls/AudioControls";
 import FileUploader from "./components/file-uploader/FileUploader";
+import ColourControls from "./components/colour-controls/ColourControls";
 import styles from "./App.module.css";
 
 export default function App() {
   const [audioFile, setAudioFile] = useState<File | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(0.7);
+  const [colour, setColour] = useState("#a5a1ff");
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -98,7 +102,12 @@ export default function App() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Audio Visualiser</h1>
+      {/* <h1 className={styles.title}>Audio Visualiser</h1> */}
+
+      <div className={styles.visualiserContainer}>
+        <VisualiserBars analyser={analyserRef.current} isPlaying={isPlaying} />
+        <VisualiserWeird analyser={analyserRef.current} isPlaying={isPlaying} />
+      </div>
 
       <div className={styles.controls}>
         <FileUploader onFileUpload={handleFileUpload} />
@@ -113,7 +122,7 @@ export default function App() {
           onSeek={handleSeek}
           hasAudio={!!audioFile}
         />
-
+        <ColourControls colour={colour} onColourChange={setColour} />
         <audio
           ref={audioRef}
           onTimeUpdate={handleTimeUpdate}
