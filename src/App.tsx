@@ -122,7 +122,7 @@ export default function App() {
           onSeek={handleSeek}
           hasAudio={!!audioFile}
         />
-        <ColourControls colour={colour} onColourChange={setColour} />
+        {/* <ColourControls colour={colour} onColourChange={setColour} /> */}
         <audio
           ref={audioRef}
           onTimeUpdate={handleTimeUpdate}
