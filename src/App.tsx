@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useRef } from "react";
-import AudioControls from "./components/AudioControls";
-import FileUploader from "./components/FileUploader";
+import AudioControls from "./components/audio-controls/AudioControls";
+import FileUploader from "./components/file-uploader/FileUploader";
 import styles from "./App.module.css";
 
 export default function App() {
