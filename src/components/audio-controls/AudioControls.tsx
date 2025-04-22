@@ -2,7 +2,7 @@
 
 import type React from "react";
 
-import { formatTime } from "../utils/formatTime";
+import { formatTime } from "../../utils/formatTime";
 import styles from "./AudioControls.module.css";
 import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 
