@@ -12,7 +12,7 @@ export default function App() {
   const [audioFile, setAudioFile] = useState<File | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(0.7);
-  const [colour, setColour] = useState("#a5a1ff");
+  // const [colour, setColour] = useState("#a5a1ff");
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
