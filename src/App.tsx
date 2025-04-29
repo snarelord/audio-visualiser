@@ -5,7 +5,7 @@ import VisualiserBars from "./components/visualiser-bars/VisualiserBars";
 import VisualiserWeird from "./components/visualiser-weird/VisualiserWeird";
 import AudioControls from "./components/audio-controls/AudioControls";
 import FileUploader from "./components/file-uploader/FileUploader";
-import ColourControls from "./components/colour-controls/ColourControls";
+// import ColourControls from "./components/colour-controls/ColourControls";
 import styles from "./App.module.css";
 
 export default function App() {
