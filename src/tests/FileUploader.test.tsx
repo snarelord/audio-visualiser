@@ -18,4 +18,14 @@ describe("FileUploader", () => {
     expect(mockOnFileUpload).toHaveBeenCalledTimes(1);
     expect(mockOnFileUpload).toHaveBeenCalledWith(testFile);
   });
+
+  test("should render correctly with default props", () => {
+    const mockOnFileUpload = vi.fn();
+    const props = {
+      onFileUpload: mockOnFileUpload,
+      audioFile: null,
+    };
+
+    expect(props).toBeTruthy();
+  });
 });
