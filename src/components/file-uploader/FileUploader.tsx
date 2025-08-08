@@ -36,7 +36,14 @@ export default function FileUploader({ onFileUpload, audioFile }: FileUploaderPr
 
   return (
     <div className={styles.container}>
-      <input type="file" ref={fileInputRef} onChange={handleFileChange} accept="audio/*" className={styles.fileInput} />
+      <input
+        type="file"
+        role="file-input"
+        ref={fileInputRef}
+        onChange={handleFileChange}
+        accept="audio/*"
+        className={styles.fileInput}
+      />
 
       <button onClick={handleClick} className={styles.uploadButton} type="button">
         {audioFile ? (
