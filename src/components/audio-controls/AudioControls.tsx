@@ -80,6 +80,7 @@ export default function AudioControls({
           onChange={handleVolumeChange}
           className={styles.volumeSlider}
           disabled={!hasAudio}
+          role="slider"
         />
       </div>
     </div>
